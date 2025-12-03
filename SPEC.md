@@ -1,75 +1,138 @@
 # The Structured Knowledge Document (SKD)
-**Specification v0.1**
-
-## Overview
-
-The Structured Knowledge Document (SKD) is a document architecture that separates **Objective Reality** (what happened) from **Subjective Reality** (what it means).
-
-**Core Principle:**
-> "Science gives us the ability to discover objective patterns through our subjective interpretations of objective observations."
-
-An SKD enforces this separation structurally, ensuring that conclusions are derived from facts rather than conflated with them.
+**Specification v0.3.1**
 
 ---
 
-## The Four Chambers
+## Definitions
 
-Every SKD contains exactly four distinct, non-permeable sections. These are invariant regardless of domain or use case.
+**Objective Reality**
+That which can be observed, measured, or verified independent of the observer's beliefs or feelings. Raw inputs: data, quotes, events, measurements.
 
-### I. Definitions
+**Subjective Reality**
+That which exists through interpretation, meaning-making, or belief. Conclusions, narratives, opinions derived from objective inputs.
 
-**Purpose:** Establish semantic bounds for all terms used in the document.
+**Epistemic Hygiene**
+The practice of keeping fact separate from opinion, making reasoning explicit and traceable, and filtering for significance.
 
-**Constraint:** No concept may appear in subsequent chambers unless defined here.
+**Chamber**
+A sealed, functional container within a document structure. Unlike a "section," a chamber describes *function and failure modes*:
+* **Airlock principle:** Prevents contamination. The Observations chamber prevents subjective content from entering.
+* **Heart principle:** One-way flow. Logic flows *from* Observations.
+* **Pressure principle:** Structural integrity. Weak walls cause collapse under logical pressure.
 
-**Rationale:** Prevents semantic drift and ensures all parties share the same understanding of key terms.
+**Severity**
+A spectrum measuring how much a fact matters to the argument at hand (Low vs. High).
+* *Note:* Severity is context-dependent.
 
-### II. Objective Observations
+**Severity Threshold**
+The specific criteria used to define "High Severity" vs "Low Severity" for a specific document context (e.g., "Policy Impact" vs. "Optics").
 
-**Purpose:** Contain raw, verifiable inputs—data, quotes, events, measurements.
+**Magnitude Matrix**
+A framework for classifying logical links by Certainty and Severity:
+* **Signal:** High Certainty + High Severity.
+* **Noise:** High Certainty + Low Severity.
+* **Speculation:** Low Certainty + High Severity.
+* **Void:** Low Certainty + Low Severity.
 
-**Constraint:** No adjectives, feelings, characterizations, or interpretive framing. Ground truth only.
+**Relevance Engine**
+The principle that not all truths are equal. The SKD filters for significance by requiring that interpretations rest on Signal.
 
-**Rationale:** Creates an uncontaminated factual foundation that can be independently verified.
+**Proportionality**
+The principle that evidence strength must match claim weight. Boulder claims need boulder evidence.
 
-### III. Logic Chain
+**Adjective Ban**
+The constraint that narrative descriptors (e.g., "massive," "struggled") are prohibited in the Observations chamber.
 
-**Purpose:** Make explicit the causal reasoning that connects Observations to Interpretations.
+**Chamber Collapse**
+A failure mode where the pressure of the argument exceeds the structural integrity of the evidence.
 
-**Constraint:** Every link must be visible and traceable. Each inference should indicate its confidence level.
+**Contamination**
+A failure mode where Subjective Reality leaks into Objective chambers.
 
-**Rationale:** Forces "showing your work"—bias and leaps in reasoning become visible when the chain is explicit.
-
-### IV. Subjective Interpretations
-
-**Purpose:** Contain the narrative, meaning, conclusions, or beliefs derived from the preceding chambers.
-
-**Constraint:** Must be explicitly labeled as subjective. Cannot be presented as fact.
-
-**Rationale:** Acknowledges that meaning is constructed, not discovered, while keeping it connected to its factual basis.
-
----
-
-## Structural Properties
-
-**Non-Permeability:** Content must not leak between chambers. An observation cannot contain interpretation. An interpretation cannot introduce new observations.
-
-**Traceability:** Any claim in Interpretations must trace back through the Logic Chain to specific Observations.
-
-**Completeness:** The Definitions chamber must contain all terms necessary to understand the document. The Observations chamber must contain all facts necessary to support the Logic Chain.
-
-**Human Consumable:** An SKD is designed to be read and understood by humans, not just processed by machines.
-
----
-
-## What an SKD Is Not
-
-- **Not a template for persuasion** — It does not optimize for convincing readers of a conclusion
-- **Not a methodology** — It does not prescribe how to gather observations or construct logic
-- **Not tooling** — It is a document structure, independent of any software implementation
+**False Equivalence**
+A failure mode where Noise is treated with the same weight as Signal.
 
 ---
 
-## Authorship
+## Observations
 
+An SKD contains exactly four chambers:
+1.  Definitions
+2.  Observations
+3.  Logic Chain
+4.  Interpretations
+
+Content flows sequentially: Definitions → Observations → Logic → Interpretation.
+
+**Chamber 1 (Definitions) Constraints:**
+* All ambiguous terms must be defined before use.
+* The document must explicitly define the **Severity Threshold** for the specific context (e.g., defining what constitutes "High Severity" for the topic at hand).
+
+**Chamber 2 (Observations) Constraints:**
+* Contains only verifiable, objective content.
+* The **Adjective Ban** is active: no narrative descriptors are permitted.
+* Non-permeability: No interpretation or synthesis allowed.
+
+**Chamber 3 (Logic Chain) Constraints:**
+* Contains inferential reasoning connecting observations to interpretations.
+* Each logical link is assessed on two axes: **Certainty** and **Severity**.
+* Interpretations must trace to **Signal** (High Certainty + High Severity).
+
+**Chamber 4 (Interpretations) Constraints:**
+* Contains subjective conclusions derived from Signal logic.
+* Noise (True but Irrelevant) must be explicitly identified.
+
+**Usage Patterns:**
+* **Deconstruction:** Input is an existing text. Process strips adjectives, isolates facts, maps logic.
+* **Construction:** Input is a raw problem. Process gathers observations, defines terms, builds logic.
+
+---
+
+## Logic Chain
+
+**Non-permeability enables independent verification.**
+Because observations contain no interpretation, they can be verified without accepting any conclusions.
+
+**The Adjective Ban isolates raw data.**
+By prohibiting narrative descriptors in observations, the framework forces separation between what happened and how it felt.
+
+**Explicit Severity Thresholds prevent calibration errors.**
+Because "Severity" is subjective, requiring an explicit definition in Chamber 1 forces the author to calibrate the Magnitude Matrix. This prevents low-stakes events (Gossip) from being processed as high-stakes events (News).
+
+**The Magnitude Matrix prevents false equivalence.**
+By classifying each logical link, the framework distinguishes between facts that are merely true (Noise) and facts that matter (Signal).
+
+**Proportionality prevents overreach.**
+Requiring that claim weight match evidence strength stops boulder claims from resting on pebble evidence.
+
+**One-way flow prevents rationalization.**
+Because logic must flow from observations, you cannot retrofit facts to fit conclusions.
+
+**Traceability to Signal ensures grounded conclusions.**
+Because interpretations must trace to Signal links, conclusions rest only on facts that are both proven and significant.
+
+---
+
+## Interpretation
+
+The Structured Knowledge Document is a document architecture designed to enforce epistemic hygiene. It acts as a **Relevance Engine**, filtering information not just for truth, but for significance.
+
+The architecture addresses three specific failures in human reasoning:
+1.  **Fact-opinion bleed** (addressed by the Airlock/Adjective Ban).
+2.  **False equivalence** (addressed by the Severity Threshold and Magnitude Matrix).
+3.  **Overreach** (addressed by Proportionality).
+
+By treating the specification itself as an SKD, this document demonstrates the recursive utility of the format: defining its own reality, observing its own rules, and verifying its own logic.
+
+### What an SKD Is Not
+* **Not a template for persuasion** — It optimizes for verification, not conviction.
+* **Not a methodology** — It does not prescribe *how* to research, only how to structure the output.
+* **Not objective** — Assessing Certainty and Severity requires judgment; the framework makes that judgment visible.
+
+---
+
+**Authorship**
 Created by Don Schartman, 2025.
+
+**License**
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Share and adapt with attribution.
