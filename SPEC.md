@@ -1,9 +1,14 @@
 # The Structured Knowledge Document (SKD)
-**Specification v0.4**
+**Specification v0.4.1**
+
+**Scope:** Define a document architecture that enforces epistemic hygiene through structural separation of objective observation from subjective interpretation.
 
 ---
 
 ## Definitions
+
+**Scope**
+The declared focus of the document—what it is trying to establish. All chambers must serve the declared scope; content that does not serve the scope does not belong in the document.
 
 **Objective Reality**
 That which exists independently of the observer. To qualify as an Objective input, a data point must possess:
@@ -100,6 +105,7 @@ An SKD contains exactly four chambers:
 Content flows sequentially: Definitions/Parameters → Observations → Logic → Interpretation.
 
 **Chamber 1 (Definitions & Parameters) Constraints:**
+* **Scope Declaration:** The document must explicitly state its scope—what it is trying to establish. Common examples include a question to answer, a claim to evaluate, or a problem to analyze.
 * All ambiguous terms must be defined before use.
 * **Parameter Declaration:** The document must explicitly define the Contextual Parameters that govern the Logic Chain. Common examples include severity thresholds, budget caps, success criteria, or qualification standards.
 * **Contextual Locking:** Definitions and parameters, once declared, cannot be modified mid-argument.
@@ -127,13 +133,12 @@ Content flows sequentially: Definitions/Parameters → Observations → Logic �
 * **Gap Acknowledgment:** Dependencies on [Unknown] values must be explicitly flagged.
 * Noise (True but Below Threshold) must be identified as such.
 
-**Usage Patterns:**
-* **Deconstruction:** Input is an existing text. Process isolates facts, strips adjectives, enforces atomic integrity, extracts implicit parameters, maps logic.
-* **Construction:** Input is a raw problem. Process declares parameters, gathers observations, builds logic chain.
-
 ---
 
 ## Logic Chain
+
+**Scope Declaration constrains relevance.**
+Because the document must state what it's trying to establish, all content must serve that focus. Observations and logic that don't advance the scope are excluded.
 
 **External Verification enables third-party audit.**
 Because observations must be confirmable by others, the factual foundation is not dependent on trusting the author.
