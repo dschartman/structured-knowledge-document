@@ -5,7 +5,7 @@
 
 ## Purpose
 
-A document architecture for epistemic hygiene. Separates what we observe from what we interpret. Works for construction (building arguments) and deconstruction (auditing arguments).
+A document architecture for epistemic hygiene. Separates observation from interpretation. Enables both construction and deconstruction of arguments.
 
 ---
 
@@ -13,102 +13,94 @@ A document architecture for epistemic hygiene. Separates what we observe from wh
 
 All claims belong to one of four categories:
 
-| Category | Definition | Test |
-|----------|------------|------|
-| **Hard Objectivity (HO)** | Observer-independent truth | Would informed parties converge? Verifiable by third party? |
-| **Framework-Dependent (FD)** | True within a cited system | Is there a nameable rulebook, standard, or law? |
-| **Soft Subjectivity (SS)** | Rational value disagreement | Could an honest, informed opponent hold this through legitimate reasoning? |
-| **Epistemic Junk (EJ)** | Not a valid epistemic move | Tribal signaling? Motive attribution? Unfalsifiable? Self-sealing logic? |
+| Category | Definition |
+|----------|------------|
+| **Hard Objectivity (HO)** | Observer-independent truth. Informed parties would converge. Verifiable by third party. |
+| **Framework-Dependent (FD)** | True within a cited system (rulebook, standard, law). |
+| **Soft Subjectivity (SS)** | Rational value disagreement. Honest, informed opponents can legitimately hold opposing views. |
+| **Epistemic Junk (EJ)** | Invalid epistemic move: tribal signaling, motive attribution, unfalsifiable claims, self-sealing logic. |
 
 ### FD Subtypes
 
-| Subtype | Definition | Requirement |
-|---------|------------|-------------|
-| **FD-settled** | Framework + settled interpretation | Cite the framework |
-| **FD-contested** | Framework exists, application disputed | Cite the framework AND the interpretive authority being relied on |
+| Subtype | Definition |
+|---------|------------|
+| **FD-settled** | Framework with settled interpretation. Cite the framework. |
+| **FD-contested** | Framework exists; application disputed. Cite framework AND interpretive authority. |
 
-If FD-contested does not cite an interpretive authority, it functions as SS — the author's application of the framework, not a settled fact.
+**Critical:** FD-contested without cited authority functions as SS — the author's application, not a settled fact.
 
-**Note:** FD subtypes are most relevant in domains where interpretation is genuinely contested (law, policy, ethics). In domains where frameworks are simply cited or not (technical standards, personal documentation), the distinction may be omitted.
+Apply FD subtypes where framework application is genuinely contested. Where interpretation is settled, omit the distinction.
 
 **Examples:**
 - "Exceeds 65 mph speed limit" → FD-settled
-- "Unconstitutional arrest" → FD-contested; requires "per [authority]"
-- "Violates GDPR Art. 6 per the Irish DPC ruling" → FD-contested with authority cited
+- "Breach of contract" → FD-contested; requires "per [authority]"
+- "Exceeds EPA emission limits per the 2023 compliance audit" → FD-contested with authority cited
 
 ---
 
 ## Chambers
 
-An SKD contains four chambers. Content flows sequentially.
+An SKD contains four chambers, executed sequentially.
 
-### Chamber 1: Scope + Frameworks + Values
+### Chamber 1: Scope
 
-**Required:**
+Declare upfront:
 - **Scope:** What is this document trying to establish?
 - **Frameworks (FD):** What external systems are being invoked? Distinguish FD-settled from FD-contested.
 - **Values (SS):** What thresholds or priorities is the author choosing?
 
-**Constraints:**
-- Frameworks and values, once declared, cannot shift mid-argument.
-- If you're choosing the threshold, it's SS. If you're citing an external source with settled interpretation, it's FD-settled. If the interpretation is disputed, it's FD-contested and requires an authority.
+**Immutability:** Frameworks and values, once declared, cannot shift mid-argument.
 
 ---
 
 ### Chamber 2: Hard Objectivity
 
-**Required:**
-- Only HO claims enter this chamber.
+Only HO claims enter this chamber. Each must satisfy:
 
-**HO Requirements:**
-
-| Requirement | Definition |
+| Requirement | Constraint |
 |-------------|------------|
-| **Externally Verifiable** | Confirmable by a third party. Actions and statements qualify. Intentions and thoughts do not. |
-| **Time-Anchored** | Fixed to a point in time (date, timestamp, or relative sequence). |
-| **Atomic** | Single, irreducible unit. No relational operators (but, therefore, despite, which) linking two facts. |
-| **Adjective-Free** | No narrative descriptors (massive, brutal, unfortunate). Record "$15,000 cost," not "excessive cost." |
+| **Externally Verifiable** | Confirmable by third party. Actions and statements qualify; intentions do not. |
+| **Time-Anchored** | Fixed to point in time: date, timestamp, or relative sequence. |
+| **Atomic** | Single, irreducible unit. No relational operators (but, therefore, despite, which). |
+| **Adjective-Free** | No evaluative or interpretive modifiers. Record "$15,000 cost," not "excessive cost." |
 
-**Handling:**
-- Missing information is recorded as **[Unknown]** with appropriate granularity (see below).
+Missing information is recorded as **[Unknown]** with appropriate type.
 
 ---
 
 ### Chamber 3: Logic
 
-**Function:**
 Apply FD and SS from Chamber 1 to HO from Chamber 2.
 
 **The Equation:**
 ```
-HO + FD → Classification (does the fact meet the standard?)
-HO + SS → Weighting (does the fact meet the declared threshold?)
+HO + FD → Classification
+HO + SS → Weighting
 ```
 
 **Constraints:**
-- Logic must respect chronology. Event at T2 cannot cause event at T1.
-- Causal claims require mechanism, not just correlation.
-- If FD is uncited or SS is undeclared, the logic link fails.
-- Narrative imposition (asserting causal or transformative structure without mechanism) is a Chamber 3 failure.
+- Chronology: Event at T2 cannot cause event at T1.
+- Causation: Requires mechanism, not just correlation.
+- Citation: Uncited FD or undeclared SS breaks the logic link.
+- Narrative imposition: Causal or transformative claims without mechanism fail.
 
 **Narrative Imposition Examples:**
-- "The shooting upended the politics of immigration" — causal claim without mechanism
-- "Democrats have awakened to a moral moment" — arc imposition without evidence
-- "This was a turning point" — transformation claim without mechanism
+- "The product launch revolutionized the industry" — transformation claim without mechanism
+- "The merger fundamentally changed company culture" — causal claim without evidence
+- "This was a turning point for the project" — transformation claim without mechanism
 
-**Legitimate alternative:** Narrative framing explicitly labeled as SS is not a failure. "I interpret these events as forming an arc of X" is valid — it declares interpretation rather than asserting causation as fact.
+**Legitimate alternative:** Narrative framing explicitly labeled as SS. "I interpret these events as forming an arc of X" declares interpretation, not causation.
 
 ---
 
 ### Chamber 4: Interpretation
 
-**Function:**
 State SS conclusions derived from Chamber 3.
 
 **Constraints:**
-- Conclusions must be proportional to surviving evidence.
-- Dependencies on **[Unknown]** must be explicitly flagged.
-- Gaps cannot be filled with assumed intent.
+- Proportionality: Conclusions must match surviving evidence.
+- Flagging: Dependencies on **[Unknown]** must be explicit.
+- No gap-filling: Assumed intent is forbidden.
 
 ---
 
@@ -123,29 +115,7 @@ Different types of missing information have different implications:
 | **[Unknown-contested]** | Sources disagree | Requires adjudication |
 | **[Unknown-omitted]** | Knowable but excluded | Potential selection bias |
 
-**Note on [Unknown-omitted]:** Flagging omission requires external knowledge — you must know the information exists to note its absence. This makes it primarily a deconstruction tool.
-
----
-
-## Construction Mode
-
-When building a new argument:
-
-1. **Chamber 1:** Declare scope. Cite frameworks (noting FD-settled vs. FD-contested). State values as SS.
-2. **Chamber 2:** Gather only HO. Test each claim against the four requirements.
-3. **Chamber 3:** Apply FD/SS to HO. Build logic chain. Ensure causal claims have mechanisms.
-4. **Chamber 4:** State conclusions. Flag [Unknown] dependencies with appropriate type.
-
----
-
-## Deconstruction Mode
-
-When auditing an existing argument:
-
-1. **Chamber 1:** Extract their scope (stated or implied), frameworks (cited or missing, settled or contested), values (declared or smuggled).
-2. **Chamber 2:** Extract their claims. Test each against HO requirements. Categorize failures as SS contamination, atomic integrity failure, or EJ.
-3. **Chamber 3:** Extract their logic links. Test each: Is FD cited (with authority if contested)? Is SS declared? Is mechanism present or just correlation? Flag narrative imposition.
-4. **Chamber 4:** Extract their conclusions. Do they exceed what survives Chambers 1-3? Are [Unknown] dependencies flagged or hidden?
+Flagging [Unknown-omitted] requires external knowledge. Deconstruction tool only.
 
 ---
 
@@ -153,10 +123,9 @@ When auditing an existing argument:
 
 | Failure | Definition |
 |---------|------------|
-| **Chamber 1 Collapse** | No scope, uncited FD, smuggled SS |
+| **Chamber 1 Collapse** | Scope undefined, FD uncited, SS undeclared, or mid-argument framework shift |
 | **Chamber 2 Contamination** | SS or EJ mixed with HO |
-| **Atomic Integrity Failure** | Compound claims with relational operators in Chamber 2 |
-| **FD-Contested Without Authority** | Framework cited but interpretive authority missing |
+| **Atomicity Violation** | Compound claims with relational operators in Chamber 2 |
 | **Narrative Imposition** | Causal or transformative claim without mechanism |
 | **Logic Failure** | FD uncited, SS undeclared, or correlation treated as causation |
 | **Chamber 4 Overreach** | Conclusions exceed surviving evidence; gaps unflagged |
@@ -168,8 +137,8 @@ When auditing an existing argument:
 | Rating | Criteria |
 |--------|----------|
 | **High** | Chambers 1-4 intact; gaps flagged with appropriate type; conclusions proportional to evidence |
-| **Medium** | Some contamination or unflagged gaps; core logic holds; central claims supported |
-| **Low** | Chamber 1 collapse OR Chamber 3 failure on central claim OR significant [Unknown-omitted] |
+| **Medium** | Minor contamination or unflagged gaps; core logic intact; primary conclusions supported |
+| **Low** | Chamber 1 collapse OR Chamber 3 failure on primary claim OR [Unknown-omitted] undermines key conclusion |
 | **Unreliable** | Structural failures across multiple chambers; conclusions unsupported by surviving evidence |
 
 ---
@@ -179,43 +148,43 @@ When auditing an existing argument:
 For any claim:
 
 ```
-Is it verifiable and would informed parties converge?
-  → Yes → HO (test the four requirements)
+Verifiable + informed parties converge?
+  → Yes → HO (test four requirements)
   → No ↓
 
-Is there a citable framework?
-  → Yes, settled interpretation → FD-settled
-  → Yes, disputed interpretation → FD-contested (cite authority)
+Citable framework?
+  → Yes, settled → FD-settled
+  → Yes, disputed → FD-contested (cite authority)
   → No ↓
 
-Could an honest, informed opponent hold this?
-  → Yes → SS (declare it as a value/threshold)
+Honest, informed opponent could hold this?
+  → Yes → SS (declare as value/threshold)
   → No ↓
 
-→ EJ (reject; does not enter the system)
+→ EJ (reject)
 ```
 
 ---
 
 ## EJ Markers
 
-Reject immediately if you see:
+Reject immediately:
 - "All [group] are [trait]"
 - "You only think that because..."
-- "Everyone knows..." (without citing what)
+- "Everyone knows..." (uncited consensus claim)
 - Denial interpreted as proof
 - Motive substituted for argument
-- Unfalsifiable claims about intent
+- Unfalsifiable claims
 
 ---
 
-## Boundaries of the Framework
+## Boundaries
 
 SKD v0.5 answers: *Is this argument epistemically hygienic?*
 
 It does not answer: *Is this SS position well-reasoned?*
 
-Once SKD surfaces that a claim is SS, the framework's job is done. Evaluating which SS positions are better reasoned is a separate task.
+Once a claim is categorized as SS, the framework's work is complete. SS quality evaluation is out of scope.
 
 ---
 
