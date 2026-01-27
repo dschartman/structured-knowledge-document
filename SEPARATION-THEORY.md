@@ -24,7 +24,7 @@ True within a system. System choice depends on goals.
 | Subtype | Definition | Example |
 |---------|------------|---------|
 | FD-settled | Framework + settled interpretation | "Exceeds 65 mph speed limit" |
-| FD-contested | Framework exists, application disputed | "Unconstitutional per the 9th Circuit ruling in X v. Y" |
+| FD-contested | Framework exists, application disputed | "Breach of contract per the arbitrator's ruling" |
 
 FD-contested without cited authority functions as SS.
 
@@ -34,7 +34,7 @@ Depends on priorities. Rational disagreement persists.
 
 **Epistemic Junk (EJ)**
 Not a valid epistemic move. Fails the test: *Could an honest, informed opponent hold this through legitimate reasoning?*
-*"All liberals are dumb" • "You only think that because..." • "Everyone knows..."*
+*"All managers are incompetent" • "You only think that because..." • "Everyone knows..."*
 
 ---
 
@@ -64,8 +64,8 @@ Ask "what kind of claim is this?" before assessing truth or quality.
 ❌ "This code is secure"
 ✓ "Meets OWASP Top 10 (2021)" (FD-settled)
 
-❌ "Unconstitutional!"
-✓ "Unconstitutional per ACLU's interpretation" (FD-contested with authority)
+❌ "Breach of contract!"
+✓ "Breach of contract per the arbitrator's ruling" (FD-contested with authority)
 
 **4. Structure: Ground → Frame → Explore**
 Lead with facts (HO), clarify systems (FD), then explore values (SS).
@@ -92,7 +92,7 @@ Presenting facts as opinions.
 
 **Type III: False Framework (SS → FD)**
 Presenting values as framework conclusions.
-*"Unconstitutional!" (without interpretive authority)*
+*"Breach of contract!" (without interpretive authority)*
 → Smuggles opinion as system output.
 
 ---
