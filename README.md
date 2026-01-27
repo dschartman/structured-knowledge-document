@@ -1,23 +1,20 @@
 # Structured Knowledge Document (SKD)
 
-A document architecture for epistemic hygiene.
+A document architecture for epistemic hygiene. Separates what we observe from what we interpret.
 
-## What is an SKD?
+## Specs
 
-The SKD is a protocol that separates **Objective Reality** (what happened) from **Subjective Reality** (what it means) through a rigid four-chamber structure:
+- **[SPEC.md](SPEC.md)** — The SKD document architecture (v0.5)
+- **[SEPARATION-THEORY.md](SEPARATION-THEORY.md)** — The categorical vocabulary (v0.2)
 
-1. **Definitions** — Semantic bounds for all terms
-2. **Objective Observations** — Verifiable facts only
-3. **Logic Chain** — Explicit causal reasoning
-4. **Subjective Interpretations** — Labeled conclusions and meaning
+## Relationship
 
-## The Spec
-
-See [SPEC.md](SPEC.md) for the full specification.
+Separation Theory classifies claims (HO/FD/SS/EJ).
+SKD structures arguments using those categories.
 
 ## License
 
-TBD
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Author
 
