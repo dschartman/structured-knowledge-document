@@ -70,8 +70,6 @@ An SKD contains four chambers. Content flows sequentially.
 | **Adjective-Free** | No narrative descriptors (massive, brutal, unfortunate). Record "$15,000 cost," not "excessive cost." |
 
 **Handling:**
-- EJ is rejected at the door. Does not enter the system.
-- SS belongs in Chamber 1 (if a value) or Chamber 4 (if a conclusion).
 - Missing information is recorded as **[Unknown]** with appropriate granularity (see below).
 
 ---
@@ -97,8 +95,6 @@ HO + SS → Weighting (does the fact meet the declared threshold?)
 - "The shooting upended the politics of immigration" — causal claim without mechanism
 - "Democrats have awakened to a moral moment" — arc imposition without evidence
 - "This was a turning point" — transformation claim without mechanism
-
-These fail Chamber 3 because they assert causation or narrative structure without showing how A led to B.
 
 **Legitimate alternative:** Narrative framing explicitly labeled as SS is not a failure. "I interpret these events as forming an arc of X" is valid — it declares interpretation rather than asserting causation as fact.
 
@@ -127,7 +123,7 @@ Different types of missing information have different implications:
 | **[Unknown-contested]** | Sources disagree | Requires adjudication |
 | **[Unknown-omitted]** | Knowable but excluded | Potential selection bias |
 
-**Note on [Unknown-omitted]:** This type requires external knowledge. You can only flag omission if you know the information exists — this makes it primarily a deconstruction tool when the auditor has access to sources the author didn't include. For deconstruction, [Unknown-omitted] is the sharpest flag — it indicates the author could have included information and chose not to.
+**Note on [Unknown-omitted]:** Flagging omission requires external knowledge — you must know the information exists to note its absence. This makes it primarily a deconstruction tool.
 
 ---
 
@@ -219,7 +215,7 @@ SKD v0.5 answers: *Is this argument epistemically hygienic?*
 
 It does not answer: *Is this SS position well-reasoned?*
 
-Evaluating SS quality requires different tools (internal consistency, reflective equilibrium, steelmanning). Once SKD v0.5 surfaces that a claim is SS, the framework's job is done. Evaluating which SS positions are better reasoned is a separate task.
+Once SKD surfaces that a claim is SS, the framework's job is done. Evaluating which SS positions are better reasoned is a separate task.
 
 ---
 
