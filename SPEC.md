@@ -29,6 +29,8 @@ All claims belong to one of four categories:
 
 If FD-contested does not cite an interpretive authority, it functions as SS — the author's application of the framework, not a settled fact.
 
+**Note:** FD subtypes are most relevant in domains where interpretation is genuinely contested (law, policy, ethics). In domains where frameworks are simply cited or not (technical standards, personal documentation), the distinction may be omitted.
+
 **Examples:**
 - "Exceeds 65 mph speed limit" → FD-settled
 - "Unconstitutional arrest" → FD-contested; requires "per [authority]"
@@ -97,6 +99,8 @@ HO + SS → Weighting (does the fact meet the declared threshold?)
 - "This was a turning point" — transformation claim without mechanism
 
 These fail Chamber 3 because they assert causation or narrative structure without showing how A led to B.
+
+**Legitimate alternative:** Narrative framing explicitly labeled as SS is not a failure. "I interpret these events as forming an arc of X" is valid — it declares interpretation rather than asserting causation as fact.
 
 ---
 
