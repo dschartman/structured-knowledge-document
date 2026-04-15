@@ -1,5 +1,5 @@
 # Structured Knowledge Document (SKD)
-**Specification v0.5**
+**Specification v0.6**
 
 ---
 
@@ -36,6 +36,21 @@ Apply FD subtypes where framework application is genuinely contested. Where inte
 - "Breach of contract" → FD-contested; requires "per [authority]"
 - "Exceeds EPA emission limits per the 2023 compliance audit" → FD-contested with authority cited
 
+### Verification Status
+
+HO and FD-contested claims carry a verification status: either the claim cites its evidence, or it is marked **[Unverified]**.
+
+| Status | How it looks |
+|--------|-------------|
+| **Verified** | Claim cites evidence inline. "The system processes 10,000 req/s per load test results on 2024-12-01." |
+| **Unverified** | Claim carries an explicit marker. "The system processes 10,000 req/s. [Unverified]" |
+
+**Rule:** Every HO or FD-contested claim must either cite its evidence or carry an [Unverified] marker. No unmarked, uncited claims.
+
+**Why:** Claims without visible verification status are silently treated as established fact — by both humans and LLM agents. The [Unverified] marker creates visible friction that prevents unverified assertions from passing as truth.
+
+Unverified claims are not rejected. They can be used in downstream reasoning, but anything that depends on an [Unverified] claim inherits that uncertainty.
+
 ---
 
 ## Chambers
@@ -63,6 +78,7 @@ Only HO claims enter this chamber. Each must satisfy:
 | **Time-Anchored** | Fixed to point in time: date, timestamp, or relative sequence. |
 | **Atomic** | Single, irreducible unit. No relational operators (but, therefore, despite, which). |
 | **Adjective-Free** | No evaluative or interpretive modifiers. Record "$15,000 cost," not "excessive cost." |
+| **Evidence-Cited or [Unverified]** | Cite evidence inline, or mark [Unverified]. No unmarked, uncited claims. |
 
 Missing information is recorded as **[Unknown]** with appropriate type.
 
@@ -128,6 +144,7 @@ Flagging [Unknown-omitted] requires external knowledge. Deconstruction tool only
 | **Atomicity Violation** | Compound claims with relational operators in Chamber 2 |
 | **Narrative Imposition** | Causal or transformative claim without mechanism |
 | **Logic Failure** | FD uncited, SS undeclared, or correlation treated as causation |
+| **Verification Gap** | HO or FD-contested claim lacks both evidence citation and [Unverified] marker |
 | **Chamber 4 Overreach** | Conclusions exceed surviving evidence; gaps unflagged |
 
 ---
@@ -180,7 +197,7 @@ Reject immediately:
 
 ## Boundaries
 
-SKD v0.5 answers: *Is this argument epistemically hygienic?*
+SKD v0.6 answers: *Is this argument epistemically hygienic?*
 
 It does not answer: *Is this SS position well-reasoned?*
 
